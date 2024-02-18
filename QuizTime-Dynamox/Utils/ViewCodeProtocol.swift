@@ -14,7 +14,7 @@ protocol ViewCodeProtocol {
 }
 
 extension ViewCodeProtocol {
-    func setup() {
+    func setupLayout() {
         addSubViews()
         setupConstraints()
         setupStyle()

@@ -23,7 +23,7 @@ final class HomeView: UIView {
     
     init() {
         super.init(frame: .zero) //iremos utilizar constraints.
-        setup()
+        setupLayout()
         
     }
     
