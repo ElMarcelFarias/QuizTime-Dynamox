@@ -41,8 +41,6 @@ final class AnswerScreenView: UIView {
         
     }
     
-    
-    
 }
 
 

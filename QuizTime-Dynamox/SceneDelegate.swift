@@ -22,8 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 //        let viewModel = HomeViewModel()
 //        let controller = HomeViewController(viewModel: viewModel)
-        let viewModel = AnswerScreenViewModel()
-        let controller = AnswerScreenViewController(viewModel: viewModel)
+        let viewModel = QuestionScreenViewModel()
+        let controller = QuestionScreenViewController(viewModel: viewModel)
         
         let navigationController =  UINavigationController(rootViewController: controller)
         window = UIWindow(frame: .zero)

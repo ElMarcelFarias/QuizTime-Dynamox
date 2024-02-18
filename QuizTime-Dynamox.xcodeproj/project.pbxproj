@@ -24,12 +24,16 @@
 		47472F942B829A6E00090311 /* AnswersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F932B829A6E00090311 /* AnswersModel.swift */; };
 		47472F962B829AAF00090311 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F952B829AAF00090311 /* ResultModel.swift */; };
 		47472F9A2B829D1F00090311 /* QMNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F992B829D1E00090311 /* QMNetwork.swift */; };
+		47472F9E2B82A5B600090311 /* QuestionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F9D2B82A5B500090311 /* QuestionScreenViewController.swift */; };
+		47472FA02B82A5C300090311 /* QuestionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F9F2B82A5C300090311 /* QuestionScreenView.swift */; };
+		47472FA22B82A5F800090311 /* QuestionScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472FA12B82A5F800090311 /* QuestionScreenViewModel.swift */; };
 		4772427C2B82576900935147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427B2B82576900935147 /* AppDelegate.swift */; };
 		4772427E2B82576900935147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427D2B82576900935147 /* SceneDelegate.swift */; };
 		477242852B82576D00935147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477242842B82576D00935147 /* Assets.xcassets */; };
 		477242932B82576D00935147 /* QuizTime_DynamoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477242922B82576D00935147 /* QuizTime_DynamoxTests.swift */; };
 		4772429D2B82576D00935147 /* QuizTime_DynamoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772429C2B82576D00935147 /* QuizTime_DynamoxUITests.swift */; };
 		4772429F2B82576D00935147 /* QuizTime_DynamoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772429E2B82576D00935147 /* QuizTime_DynamoxUITestsLaunchTests.swift */; };
+		477ED10B2B82AA9200EEC36B /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477ED10A2B82AA9200EEC36B /* QuestionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,9 @@
 		47472F932B829A6E00090311 /* AnswersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersModel.swift; sourceTree = "<group>"; };
 		47472F952B829AAF00090311 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		47472F992B829D1E00090311 /* QMNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QMNetwork.swift; sourceTree = "<group>"; };
+		47472F9D2B82A5B500090311 /* QuestionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScreenViewController.swift; sourceTree = "<group>"; };
+		47472F9F2B82A5C300090311 /* QuestionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScreenView.swift; sourceTree = "<group>"; };
+		47472FA12B82A5F800090311 /* QuestionScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScreenViewModel.swift; sourceTree = "<group>"; };
 		477242782B82576900935147 /* QuizTime-Dynamox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuizTime-Dynamox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4772427B2B82576900935147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4772427D2B82576900935147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 		477242982B82576D00935147 /* QuizTime-DynamoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QuizTime-DynamoxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4772429C2B82576D00935147 /* QuizTime_DynamoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTime_DynamoxUITests.swift; sourceTree = "<group>"; };
 		4772429E2B82576D00935147 /* QuizTime_DynamoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTime_DynamoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		477ED10A2B82AA9200EEC36B /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,25 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		47472F9C2B82A59B00090311 /* QuestionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				47472FA32B82AA2B00090311 /* Views */,
+				47472F9D2B82A5B500090311 /* QuestionScreenViewController.swift */,
+				47472F9F2B82A5C300090311 /* QuestionScreenView.swift */,
+				47472FA12B82A5F800090311 /* QuestionScreenViewModel.swift */,
+			);
+			path = QuestionScreen;
+			sourceTree = "<group>";
+		};
+		47472FA32B82AA2B00090311 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				477ED10A2B82AA9200EEC36B /* QuestionTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4772426F2B82576800935147 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +221,7 @@
 		4772427A2B82576900935147 /* QuizTime-Dynamox */ = {
 			isa = PBXGroup;
 			children = (
+				47472F9C2B82A59B00090311 /* QuestionScreen */,
 				47472F902B8299B300090311 /* Models */,
 				47472F832B8285C000090311 /* ResultScreen */,
 				47472F822B82856E00090311 /* AnswerScreen */,
@@ -354,11 +382,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47472F9E2B82A5B600090311 /* QuestionScreenViewController.swift in Sources */,
 				47472F762B825CEB00090311 /* HomeViewController.swift in Sources */,
+				47472FA02B82A5C300090311 /* QuestionScreenView.swift in Sources */,
 				47472F7D2B827C8800090311 /* ErrorScreenViewController.swift in Sources */,
 				47472F962B829AAF00090311 /* ResultModel.swift in Sources */,
 				47472F8B2B8290EE00090311 /* AnswerScreenView.swift in Sources */,
 				47472F872B82865D00090311 /* ResultScreenViewModel.swift in Sources */,
+				47472FA22B82A5F800090311 /* QuestionScreenViewModel.swift in Sources */,
 				47472F812B827CA200090311 /* ErrorScreenViewModel.swift in Sources */,
 				47472F7A2B825CF900090311 /* HomeViewModel.swift in Sources */,
 				47472F852B82865300090311 /* ResultScreenViewController.swift in Sources */,
@@ -372,6 +403,7 @@
 				4772427C2B82576900935147 /* AppDelegate.swift in Sources */,
 				4772427E2B82576900935147 /* SceneDelegate.swift in Sources */,
 				47472F892B82866A00090311 /* ResultScreenView.swift in Sources */,
+				477ED10B2B82AA9200EEC36B /* QuestionTableViewCell.swift in Sources */,
 				47472F8F2B82910500090311 /* AnswerScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
