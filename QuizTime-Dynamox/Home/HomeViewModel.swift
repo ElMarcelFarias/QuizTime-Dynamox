@@ -19,8 +19,8 @@ protocol HomeViewModelProtocol {
 final class HomeViewModel: HomeViewModelProtocol {
     
     var titleLabel = "QUIZ TIME"
-    var textFieldTitle = "INSIRA SEU USUÁRIO"
-    var nickNameTextFieldPlaceholder = "EX: MARCEL"
+    var textFieldTitle = "INSIRA UM USUÁIO PARA INICIAR"
+    var nickNameTextFieldPlaceholder = "INSIRA UM USUÁRIO"
     var startButton = "COMEÇAR"
     
 }

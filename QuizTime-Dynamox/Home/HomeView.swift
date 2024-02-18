@@ -40,9 +40,18 @@ final class HomeView: UIView {
         }
     }
     
-    
 }
 
+extension HomeView: UITextFieldDelegate {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string
+        startButton.isEnabled = !newText.isEmpty
+        startButton.isHidden = newText.isEmpty
+        return true
+    }
+    
+}
 
 extension HomeView: ViewCodeProtocol {
     func addSubViews() {
@@ -95,9 +104,12 @@ extension HomeView: ViewCodeProtocol {
         nickNameTextField.backgroundColor = .white
         nickNameTextField.layer.cornerRadius = 4
         nickNameTextField.textAlignment = .center
+        nickNameTextField.delegate = self
         
         startButton.backgroundColor = .white
         startButton.setTitleColor(.black, for: .normal)
+        startButton.isEnabled = false
+        startButton.isHidden = true
     }
     
     
