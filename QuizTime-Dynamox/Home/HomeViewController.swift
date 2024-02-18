@@ -10,7 +10,15 @@ import UIKit
 //final == a classe não vai ter herança
 
 final class HomeViewController: UIViewController {
-    init() {
+    
+    private var homeView: HomeView? {
+        return view as? HomeView
+    }
+    
+    private let viewModel: HomeViewModelProtocol
+    
+    init(viewModel: HomeViewModelProtocol) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(hideKeyboard))
@@ -28,7 +36,10 @@ final class HomeViewController: UIViewController {
         view = HomeView()
     }
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        homeView?.viewModel = viewModel
+    }
     
     @objc private func hideKeyboard() {
         self.view.endEditing(true)

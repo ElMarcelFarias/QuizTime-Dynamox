@@ -15,11 +15,15 @@ final class HomeView: UIView {
     private let textFieldTitle = UILabel()
     private let nickNameTextField = UITextField()
     private let startButton = UIButton()
+    var viewModel: HomeViewModelProtocol? {
+        didSet {
+            setupModel()
+        }
+    }
     
     init() {
         super.init(frame: .zero) //iremos utilizar constraints.
         setup()
-        
         
     }
     
@@ -27,6 +31,14 @@ final class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupModel() {
+        if let viewModel = viewModel {
+            titleLabel.text = viewModel.titleLabel
+            textFieldTitle.text = viewModel.textFieldTitle
+            nickNameTextField.placeholder = viewModel.nickNameTextFieldPlaceholder
+            startButton.setTitle(viewModel.startButton, for: .normal)
+        }
+    }
     
     
 }
@@ -73,22 +85,17 @@ extension HomeView: ViewCodeProtocol {
         startButton.translatesAutoresizingMaskIntoConstraints = false
         
         backgroundColor = .systemPurple
-        titleLabel.text = "QUIZ TIME"
+        
         titleLabel.font = UIFont.boldSystemFont(ofSize: 44)
         titleLabel.textColor = .white
         
-        
-        textFieldTitle.text = "INSIRA SEU USUÁRIO"
         textFieldTitle.font = UIFont.boldSystemFont(ofSize: 24)
         textFieldTitle.textColor = .white
         
         nickNameTextField.backgroundColor = .white
         nickNameTextField.layer.cornerRadius = 4
         nickNameTextField.textAlignment = .center
-        nickNameTextField.placeholder = "EX: MARCEL"
         
-        
-        startButton.setTitle("COMEÇAR", for: .normal)
         startButton.backgroundColor = .white
         startButton.setTitleColor(.black, for: .normal)
     }
