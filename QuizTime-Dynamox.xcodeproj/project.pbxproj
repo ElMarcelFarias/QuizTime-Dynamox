@@ -23,6 +23,7 @@
 		47472F922B829A1500090311 /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F912B829A1500090311 /* QuestionsModel.swift */; };
 		47472F942B829A6E00090311 /* AnswersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F932B829A6E00090311 /* AnswersModel.swift */; };
 		47472F962B829AAF00090311 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F952B829AAF00090311 /* ResultModel.swift */; };
+		47472F9A2B829D1F00090311 /* QMNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F992B829D1E00090311 /* QMNetwork.swift */; };
 		4772427C2B82576900935147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427B2B82576900935147 /* AppDelegate.swift */; };
 		4772427E2B82576900935147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427D2B82576900935147 /* SceneDelegate.swift */; };
 		477242852B82576D00935147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477242842B82576D00935147 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		47472F912B829A1500090311 /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
 		47472F932B829A6E00090311 /* AnswersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersModel.swift; sourceTree = "<group>"; };
 		47472F952B829AAF00090311 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		47472F992B829D1E00090311 /* QMNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QMNetwork.swift; sourceTree = "<group>"; };
 		477242782B82576900935147 /* QuizTime-Dynamox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuizTime-Dynamox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4772427B2B82576900935147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4772427D2B82576900935147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		47472F712B825BB900090311 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				47472F982B829CE000090311 /* Network */,
 				47472F722B825BE500090311 /* ViewCodeProtocol.swift */,
 			);
 			path = Utils;
@@ -158,6 +161,14 @@
 				47472F952B829AAF00090311 /* ResultModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		47472F982B829CE000090311 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				47472F992B829D1E00090311 /* QMNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		4772426F2B82576800935147 = {
@@ -353,6 +364,7 @@
 				47472F852B82865300090311 /* ResultScreenViewController.swift in Sources */,
 				47472F732B825BE500090311 /* ViewCodeProtocol.swift in Sources */,
 				47472F782B825CF200090311 /* HomeView.swift in Sources */,
+				47472F9A2B829D1F00090311 /* QMNetwork.swift in Sources */,
 				47472F7F2B827C9100090311 /* ErrorScreenView.swift in Sources */,
 				47472F8D2B8290F900090311 /* AnswerScreenViewModel.swift in Sources */,
 				47472F922B829A1500090311 /* QuestionsModel.swift in Sources */,
