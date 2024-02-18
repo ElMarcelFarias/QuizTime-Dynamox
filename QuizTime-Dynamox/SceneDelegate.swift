@@ -20,10 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //UIWindow a cama mais baixa de view que conseguimos utilizar, a nossa tela.
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let viewController =  UINavigationController(rootViewController: ViewController())
+        let controller = HomeViewController()
+        let navigationController =  UINavigationController(rootViewController: controller)
         window = UIWindow(frame: .zero)
         window?.makeKeyAndVisible() // Faça ela ser visivel
-        window?.rootViewController = viewController
+        window?.rootViewController = navigationController
         window?.windowScene = windowScene
         
         //setup basico para iniciar a viewcontroller em viewcode.
