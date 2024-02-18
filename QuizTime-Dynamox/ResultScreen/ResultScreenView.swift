@@ -60,7 +60,8 @@ extension ResultScreenView: ViewCodeProtocol {
         ])
         
         NSLayoutConstraint.activate([
-            rightAnswer.centerXAnchor.constraint(equalTo: centerXAnchor),
+            rightAnswer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            rightAnswer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
             rightAnswer.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
@@ -102,11 +103,14 @@ extension ResultScreenView: ViewCodeProtocol {
         titleLabel.textColor = .white
         
         rightAnswer.font = UIFont.boldSystemFont(ofSize: 44)
-        rightAnswer.textColor = .white
+        rightAnswer.backgroundColor = .white
+        rightAnswer.textAlignment = .center
         
         wrongAnswer.textAlignment = .center
         wrongAnswer.font = UIFont.boldSystemFont(ofSize: 44)
-        wrongAnswer.textColor = .white
+        wrongAnswer.backgroundColor = .white
+        wrongAnswer.layer.masksToBounds = true
+        wrongAnswer.layer.cornerRadius = 4
         
         backButton.backgroundColor = .white
         backButton.setTitleColor(.black, for: .normal)
