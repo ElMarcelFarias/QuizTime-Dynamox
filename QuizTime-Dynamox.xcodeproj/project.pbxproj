@@ -10,9 +10,7 @@
 		4772427C2B82576900935147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427B2B82576900935147 /* AppDelegate.swift */; };
 		4772427E2B82576900935147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427D2B82576900935147 /* SceneDelegate.swift */; };
 		477242802B82576900935147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427F2B82576900935147 /* ViewController.swift */; };
-		477242832B82576900935147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477242812B82576900935147 /* Main.storyboard */; };
 		477242852B82576D00935147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477242842B82576D00935147 /* Assets.xcassets */; };
-		477242882B82576D00935147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477242862B82576D00935147 /* LaunchScreen.storyboard */; };
 		477242932B82576D00935147 /* QuizTime_DynamoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477242922B82576D00935147 /* QuizTime_DynamoxTests.swift */; };
 		4772429D2B82576D00935147 /* QuizTime_DynamoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772429C2B82576D00935147 /* QuizTime_DynamoxUITests.swift */; };
 		4772429F2B82576D00935147 /* QuizTime_DynamoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772429E2B82576D00935147 /* QuizTime_DynamoxUITestsLaunchTests.swift */; };
@@ -40,9 +38,7 @@
 		4772427B2B82576900935147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4772427D2B82576900935147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4772427F2B82576900935147 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		477242822B82576900935147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		477242842B82576D00935147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		477242872B82576D00935147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477242892B82576D00935147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4772428E2B82576D00935147 /* QuizTime-DynamoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QuizTime-DynamoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		477242922B82576D00935147 /* QuizTime_DynamoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTime_DynamoxTests.swift; sourceTree = "<group>"; };
@@ -102,9 +98,7 @@
 				4772427B2B82576900935147 /* AppDelegate.swift */,
 				4772427D2B82576900935147 /* SceneDelegate.swift */,
 				4772427F2B82576900935147 /* ViewController.swift */,
-				477242812B82576900935147 /* Main.storyboard */,
 				477242842B82576D00935147 /* Assets.xcassets */,
-				477242862B82576D00935147 /* LaunchScreen.storyboard */,
 				477242892B82576D00935147 /* Info.plist */,
 			);
 			path = "QuizTime-Dynamox";
@@ -231,9 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				477242882B82576D00935147 /* LaunchScreen.storyboard in Resources */,
 				477242852B82576D00935147 /* Assets.xcassets in Resources */,
-				477242832B82576900935147 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +287,6 @@
 			targetProxy = 477242992B82576D00935147 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		477242812B82576900935147 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				477242822B82576900935147 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		477242862B82576D00935147 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				477242872B82576D00935147 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		477242A02B82576D00935147 /* Debug */ = {
@@ -442,7 +415,6 @@
 				INFOPLIST_FILE = "QuizTime-Dynamox/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +426,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,7 +442,6 @@
 				INFOPLIST_FILE = "QuizTime-Dynamox/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +453,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
