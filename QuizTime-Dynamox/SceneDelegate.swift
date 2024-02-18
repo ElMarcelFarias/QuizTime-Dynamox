@@ -22,8 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 //        let viewModel = HomeViewModel()
 //        let controller = HomeViewController(viewModel: viewModel)
-        let viewModel = ErrorScreenViewModel()
-        let controller = ErrorScreenViewController(viewModel: viewModel)
+        let viewModel = ResultScreenViewModel()
+        let controller = ResultScreenViewController(viewModel: viewModel)
         
         let navigationController =  UINavigationController(rootViewController: controller)
         window = UIWindow(frame: .zero)

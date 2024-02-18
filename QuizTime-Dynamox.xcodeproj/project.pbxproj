@@ -14,6 +14,9 @@
 		47472F7D2B827C8800090311 /* ErrorScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F7C2B827C8800090311 /* ErrorScreenViewController.swift */; };
 		47472F7F2B827C9100090311 /* ErrorScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F7E2B827C9100090311 /* ErrorScreenView.swift */; };
 		47472F812B827CA200090311 /* ErrorScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F802B827CA200090311 /* ErrorScreenViewModel.swift */; };
+		47472F852B82865300090311 /* ResultScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F842B82865300090311 /* ResultScreenViewController.swift */; };
+		47472F872B82865D00090311 /* ResultScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F862B82865D00090311 /* ResultScreenViewModel.swift */; };
+		47472F892B82866A00090311 /* ResultScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47472F882B82866A00090311 /* ResultScreenView.swift */; };
 		4772427C2B82576900935147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427B2B82576900935147 /* AppDelegate.swift */; };
 		4772427E2B82576900935147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772427D2B82576900935147 /* SceneDelegate.swift */; };
 		477242852B82576D00935147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477242842B82576D00935147 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		47472F7C2B827C8800090311 /* ErrorScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreenViewController.swift; sourceTree = "<group>"; };
 		47472F7E2B827C9100090311 /* ErrorScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreenView.swift; sourceTree = "<group>"; };
 		47472F802B827CA200090311 /* ErrorScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorScreenViewModel.swift; sourceTree = "<group>"; };
+		47472F842B82865300090311 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
+		47472F862B82865D00090311 /* ResultScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreenViewModel.swift; sourceTree = "<group>"; };
+		47472F882B82866A00090311 /* ResultScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreenView.swift; sourceTree = "<group>"; };
 		477242782B82576900935147 /* QuizTime-Dynamox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuizTime-Dynamox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4772427B2B82576900935147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4772427D2B82576900935147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 		47472F832B8285C000090311 /* ResultScreen */ = {
 			isa = PBXGroup;
 			children = (
+				47472F842B82865300090311 /* ResultScreenViewController.swift */,
+				47472F862B82865D00090311 /* ResultScreenViewModel.swift */,
+				47472F882B82866A00090311 /* ResultScreenView.swift */,
 			);
 			path = ResultScreen;
 			sourceTree = "<group>";
@@ -310,13 +319,16 @@
 			files = (
 				47472F762B825CEB00090311 /* HomeViewController.swift in Sources */,
 				47472F7D2B827C8800090311 /* ErrorScreenViewController.swift in Sources */,
+				47472F872B82865D00090311 /* ResultScreenViewModel.swift in Sources */,
 				47472F812B827CA200090311 /* ErrorScreenViewModel.swift in Sources */,
 				47472F7A2B825CF900090311 /* HomeViewModel.swift in Sources */,
+				47472F852B82865300090311 /* ResultScreenViewController.swift in Sources */,
 				47472F732B825BE500090311 /* ViewCodeProtocol.swift in Sources */,
 				47472F782B825CF200090311 /* HomeView.swift in Sources */,
 				47472F7F2B827C9100090311 /* ErrorScreenView.swift in Sources */,
 				4772427C2B82576900935147 /* AppDelegate.swift in Sources */,
 				4772427E2B82576900935147 /* SceneDelegate.swift in Sources */,
+				47472F892B82866A00090311 /* ResultScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
