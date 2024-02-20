@@ -10,6 +10,7 @@ import UIKit
 final class QuestionScreenView: UIView {
     
     private let titleLabel = UILabel()
+    private let quitGame = UIButton()
     private let questionTitle = UILabel()
     private let optionsTitle = UIButton()
     private let sendAnswer = UIButton()
@@ -40,6 +41,7 @@ final class QuestionScreenView: UIView {
             questionTitle.text = viewModel.questionTitle
             //optionsTitle.setTitle(viewModel.nextQuestion, for: .normal)
             sendAnswer.setTitle(viewModel.sendAnswer, for: .normal)
+            quitGame.setTitle(viewModel.quitGame, for: .normal)
             tableView.reloadData()
         }
         
@@ -83,12 +85,18 @@ extension QuestionScreenView: ViewCodeProtocol {
         addSubview(optionsTitle)
         addSubview(tableView)
         addSubview(sendAnswer)
+        addSubview(quitGame)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            quitGame.topAnchor.constraint(equalTo: topAnchor, constant: 48),
+            quitGame.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24)
+        ])
+        
+        NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 88)
+            titleLabel.topAnchor.constraint(equalTo: quitGame.bottomAnchor, constant: 24)
         ])
         
         NSLayoutConstraint.activate([
@@ -127,6 +135,7 @@ extension QuestionScreenView: ViewCodeProtocol {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         questionTitle.translatesAutoresizingMaskIntoConstraints = false
         sendAnswer.translatesAutoresizingMaskIntoConstraints = false
+        quitGame.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(QuestionTableViewCell.self, forCellReuseIdentifier: "questionCell")
         tableView.layer.cornerRadius = 4
         tableView.backgroundColor = .systemPurple
@@ -142,6 +151,10 @@ extension QuestionScreenView: ViewCodeProtocol {
         sendAnswer.backgroundColor = .white
         sendAnswer.setTitleColor(.black, for: .normal)
         sendAnswer.layer.cornerRadius = 4
+        
+        quitGame.backgroundColor = .systemRed
+        quitGame.setTitleColor(.white, for: .normal)
+        quitGame.layer.cornerRadius = 4
         
     }
     

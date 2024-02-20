@@ -13,11 +13,16 @@ class QuestionScreenViewController: UIViewController {
         return view as? QuestionScreenView
     }
     
+    
+    
     private let viewModel: QuestionScreenViewModelProtocol
     
     init(viewModel: QuestionScreenViewModelProtocol) {
+        
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        fetchQuestion()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -32,6 +37,26 @@ class QuestionScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         questionScreenView?.viewModel = viewModel
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    private func fetchQuestion() {
+        
+        let endPoint = QMNetworkEndpoint.fetchQuestions.endPoint
+        
+        
+        QMNetwork.getRequest(endpoint: endPoint, responseType: QuestionsModel.self) { result in
+            switch result {
+                
+            case .success(_):
+                print("sucess")
+            case .failure(_):
+                print("error mas s[o pra testar msm")
+            }
+        }
+        
+        
+        
     }
     
 }

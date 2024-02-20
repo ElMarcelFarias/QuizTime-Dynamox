@@ -40,16 +40,16 @@ final class AnswerScreenViewController: UIViewController {
         let awnserBody = AnswersModel(answer: "teste")
         let endPoint = QMNetworkEndpoint.postCheckAnswer(questionId: "22").endPoint
         
-        QMNetwork.request(endpoint: endPoint, method: .post, requestBody: awnserBody, responseType: ResultModel.self) { result in
+        QMNetwork.postRequest(endpoint: endPoint, requestBody: awnserBody, responseType: ResultModel.self) { result in
             switch result {
-                
+
             case .success(_):
                 print("sucess")
             case .failure(_):
                 print("error mas s[o pra testar msm")
             }
-            
         }
+        
     }
     
 }

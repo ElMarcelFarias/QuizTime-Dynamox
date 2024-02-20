@@ -9,6 +9,10 @@
 
 import UIKit
 
+protocol HomeViewDelegate: AnyObject {
+    func startDidTap()
+}
+
 final class HomeView: UIView {
     
     private let titleLabel = UILabel()
@@ -20,6 +24,8 @@ final class HomeView: UIView {
             setupModel()
         }
     }
+    
+    weak var delegate: HomeViewDelegate?
     
     init() {
         super.init(frame: .zero) //iremos utilizar constraints.
@@ -38,6 +44,10 @@ final class HomeView: UIView {
             nickNameTextField.placeholder = viewModel.nickNameTextFieldPlaceholder
             startButton.setTitle(viewModel.startButton, for: .normal)
         }
+    }
+    
+    @objc func startDidTap() {
+        delegate?.startDidTap()
     }
     
 }
@@ -68,7 +78,8 @@ extension HomeView: ViewCodeProtocol {
         ])
         
         NSLayoutConstraint.activate([
-            textFieldTitle.centerXAnchor.constraint(equalTo: centerXAnchor),
+            textFieldTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            textFieldTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
             textFieldTitle.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
@@ -99,6 +110,8 @@ extension HomeView: ViewCodeProtocol {
         titleLabel.textColor = .white
         
         textFieldTitle.font = UIFont.boldSystemFont(ofSize: 24)
+        textFieldTitle.textAlignment = .center
+        textFieldTitle.numberOfLines = 0
         textFieldTitle.textColor = .white
         
         nickNameTextField.backgroundColor = .white
@@ -110,6 +123,7 @@ extension HomeView: ViewCodeProtocol {
         startButton.setTitleColor(.black, for: .normal)
         startButton.isEnabled = false
         startButton.isHidden = true
+        startButton.addTarget(self, action: #selector(startDidTap), for: .touchUpInside)
     }
     
     

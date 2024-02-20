@@ -39,10 +39,24 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeView?.viewModel = viewModel
+        homeView?.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     @objc private func hideKeyboard() {
         self.view.endEditing(true)
     }
+    
+    
+}
+
+extension HomeViewController: HomeViewDelegate {
+    func startDidTap() {
+        let viewModel = QuestionScreenViewModel()
+        let questionController = QuestionScreenViewController(viewModel: viewModel)
+        self.navigationController?.pushViewController(questionController, animated: true)
+        
+    }
+    
     
 }

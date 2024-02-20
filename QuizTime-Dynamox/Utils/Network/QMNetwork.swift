@@ -23,23 +23,18 @@ enum QMNetworkEndpoint {
 
 class QMNetwork {
 
-    enum HTTPMethod: String {
-        case get = "GET"
-        case post = "POST"
-    }
+    
 
     // Método genérico para fazer solicitações HTTP
-    static func request<T: Codable, U: Codable>(endpoint: String, method: HTTPMethod, requestBody: T?, responseType: U.Type, completion: @escaping (Result<U, Error>) -> Void) {
+    static func postRequest<T: Codable, U: Codable>(endpoint: String, requestBody: T?, responseType: U.Type, completion: @escaping (Result<U, Error>) -> Void) {
 
         guard let url = URL(string: "https://quiz-api-bwi5hjqyaq-uc.a.run.app/" + endpoint) else {
             completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
             return
         }
         
-        print(url)
-
         var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
+        request.httpMethod = "POST"
 
         if let requestBody = requestBody {
             do {
@@ -51,10 +46,40 @@ class QMNetwork {
                 return
             }
         }
+        
+        
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 completion(.failure(error ?? NSError(domain: "Unknown error", code: -1, userInfo: nil)))
+                print("=======> CAI NO ERRO DO GUARD LET")
+                return
+            }
+
+            do {
+                let responseObject = try JSONDecoder().decode(U.self, from: data)
+                completion(.success(responseObject))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+
+        task.resume()
+    }
+    
+    
+    
+    static func getRequest<U: Codable>(endpoint: String, responseType: U.Type, completion: @escaping (Result<U, Error>) -> Void) {
+
+        guard let request = URL(string: "https://quiz-api-bwi5hjqyaq-uc.a.run.app/" + endpoint) else {
+            completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(.failure(error ?? NSError(domain: "Unknown error", code: -1, userInfo: nil)))
+                print("=======> CAI NO ERRO DO GUARD LET")
                 return
             }
 

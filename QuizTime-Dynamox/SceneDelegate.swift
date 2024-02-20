@@ -20,10 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //UIWindow a cama mais baixa de view que conseguimos utilizar, a nossa tela.
         guard let windowScene = (scene as? UIWindowScene) else { return }
-//        let viewModel = HomeViewModel()
-//        let controller = HomeViewController(viewModel: viewModel)
-        let viewModel = QuestionScreenViewModel()
-        let controller = QuestionScreenViewController(viewModel: viewModel)
+        let viewModel = HomeViewModel()
+        let controller = HomeViewController(viewModel: viewModel)
         
         let navigationController =  UINavigationController(rootViewController: controller)
         window = UIWindow(frame: .zero)
